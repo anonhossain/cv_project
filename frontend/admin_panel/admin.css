@@ -1,0 +1,193 @@
+/* Reset and Global Styling */
+* {
+    /* margin: 20; */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    
+}
+body {
+    margin: 0;
+}
+input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Admin Panel Header */
+.admin-header {
+    background-color: #205072;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 200px;
+    background-color: #205072;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: calc(100vh - 60px);
+    padding-top: 20px;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); */
+    /* border-right: 1px solid #ccc; */
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    padding: 15px 20px;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #329D9C;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+}
+
+/* Role Filter and Counts */
+.filter-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-section label {
+    font-size: 16px;
+    color: #205072;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#roleFilter {
+    padding: 10px;
+    border: 1px solid #329D9C;
+    border-radius: 5px;
+    background-color: #CFF4D2;
+    font-size: 16px;
+    color: #205072;
+    cursor: pointer;
+}
+
+.role-counts {
+    margin-left: 20px;
+}
+
+.role-count {
+    margin-right: 15px;
+    padding: 5px 10px;
+    color: #205072;
+    background-color: #CFF4D2;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.role-count.active {
+    background-color: #329D9C; /* Highlight selected filter */
+    color: #fff;
+}
+
+/* Table Styling */
+#usersTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#usersTable th, #usersTable td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+#usersTable th {
+    background-color: #205072;
+    color: #fff;
+    font-weight: bold;
+}
+
+#usersTable tbody tr:hover {
+    background-color: #f1f9f9;
+}
+
+/* Modal Styling */
+#editUserModal, #confirmDeleteModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    
+}
+
+#editUserModal h3, #confirmDeleteModal p {
+    margin-bottom: 15px;
+}
+
+.logout {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Buttons */
+#editUserModal button {
+    background-color: #329D9C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#editUserModal button:hover {
+    background-color: #205072;
+}
+
+#editUserModal button[type="button"] {
+    background-color: #e74c3c;
+}
+
+#editUserModal button[type="button"]:hover {
+    background-color: #c0392b;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Mail</title>
+    <link rel="stylesheet" href="communication_body.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Send Mails</h1>
+        <form id="mail-sms-form" method="post" enctype="multipart/form-data">
+            
+            <!-- Upload Excel Section -->
+            <div class="input-section">
+                <h3>Upload Excel Sheet</h3>
+                <label for="excel-upload">Upload Excel File:</label>
+                <input type="file" id="excel-upload" name="excel_file" accept=".xlsx, .xls, .csv">
+            </div>
+
+            <!-- Select Email Column Section -->
+            <div class="input-section">
+                <label for="email-column-select"><strong>Select Email Column:</strong></label>
+                <select id="email-column-select" name="email_column">
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+
+            <!-- Enter Subject -->
+            <div class="input-section">
+                <label for="email-subject"><strong>Subject:</strong></label>
+                <input type="text" id="email-subject" name="email_subject" placeholder="Enter email subject...">
+            </div>
+
+            <!-- Enter Message -->
+            <div class="input-section">
+                <label for="message-content"><strong>Message:</strong></label>
+                <textarea id="message-content" name="message_content" placeholder="Write your message here..." rows="6"></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-section">
+                <button class="btn" type="submit">Send</button>
+                <button class="btn" type="reset">Reset</button>
+                <button onclick="history.back()" class="back-button">Back</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+<script src="communication_body.js"></script>
+</html>

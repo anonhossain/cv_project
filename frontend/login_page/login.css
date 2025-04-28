@@ -1,0 +1,84 @@
+/* login.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #205072;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #CFF4D2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    color: #205072;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #205072;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #329D9C;
+    border-radius: 5px;
+    background-color: #f1f7f5;
+    color: #205072;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #7BE495;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: #329D9C;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #205072;
+}
+
+button[type="button"] {
+    background-color: #7BE495;
+    color: #fff;
+}
+
+button[type="button"]:hover {
+    background-color: #329D9C;
+}

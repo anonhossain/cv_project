@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Resume</title>
+    <link rel="stylesheet" href="test_resume.css" />
+    <script src="./test_resume.js"></script>
+  </head>
+  <body>
+    <section class="container" id="container">
+      <div>
+        <h2>Test Resume</h2>
+
+        <!-- Upload Section -->
+        <form id="upload-form" enctype="multipart/form-data">
+          <div class="upload-section">
+            <label for="jobDescription">Enter Job Description Text:</label>
+            <textarea
+              id="jobDescription"
+              name="job_desc"
+              rows="4"
+              placeholder="Type the job description here..."
+              required
+            ></textarea>
+
+            <label for="resumeUpload">Upload Resume PDF:</label>
+            <input
+              type="file"
+              id="resumeUpload"
+              name="resume"
+              accept=".pdf"
+              required
+            />
+          </div>
+
+          <!-- Submit Section -->
+          <div class="button-section">
+            <button type="button" onclick="submitForm()">Submit</button>
+          </div>
+        </form>
+
+        <!-- Analysis Section -->
+        <div class="button-section">
+          <button id="analyzeButton" type="button" onclick="analyzeResume()">
+            Analyze Resume
+          </button>
+          <button type="button" id="loginButton" onclick="loginPage()">
+            Login
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result Section -->
+    <div
+      class="result-panel"
+      id="resultPanel"
+      style="display: none; text-align: start; height: 85vh; overflow: auto"
+    >
+      <div id="resultContent">Results will appear here.</div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" style="display: none">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150">
+        <path
+          fill="none"
+          stroke="#FF156D"
+          stroke-width="15"
+          stroke-linecap="round"
+          stroke-dasharray="300 385"
+          stroke-dashoffset="0"
+          d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"
+        >
+          <animate
+            attributeName="stroke-dashoffset"
+            calcMode="spline"
+            dur="2"
+            values="685;-685"
+            keySplines="0 0 1 1"
+            repeatCount="indefinite"
+          ></animate>
+        </path>
+      </svg>
+      <p>Analysing Your CV...</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
