@@ -54,13 +54,19 @@ CV Tutor is a smart AI-based web application that enhances job applications for 
 ----
 ![Each Question File](https://github.com/anonhossain/cv_project/blob/main/screenshots/7.Generate%20Q.PNG)
 
-## 🖼️ Screenshots
+## 🖼️ Other Screenshots
 
 ### 📌 Landing Page
-![Landing Page](https://raw.githubusercontent.com/anonhossain/cv_tutor/main/screenshot/Landing%20Page.png)
+![Landing Page](https://github.com/anonhossain/cv_project/blob/main/screenshots/1.PNG)
+
+### 📌 Login and Signup
+![Login](https://github.com/anonhossain/cv_project/blob/main/screenshots/3.PNG)
+
+### 📌 Admin Panel
+![Login](https://github.com/anonhossain/cv_project/blob/main/screenshots/Admin%20credential%20change.PNG)
 
 ### 📌 Dashboard & Main Features
-![Dashboard](https://raw.githubusercontent.com/anonhossain/cv_tutor/main/screenshot/Dashboard.png)
+![Dashboard](https://github.com/anonhossain/cv_project/blob/main/screenshots/4%20hrbody.PNG)
 
 ---
 
@@ -73,11 +79,3 @@ CV Tutor is a smart AI-based web application that enhances job applications for 
 - **Automation:** SMTP, Email Templates
 
 ---
-
-## 🔧 Setup Instructions
-
-```bash
-git clone https://github.com/anonhossain/cv_tutor.git
-cd cv_tutor
-pip install -r requirements.txt
-python main.py
