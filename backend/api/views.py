@@ -17,15 +17,16 @@ import re
 from fastapi import FastAPI, File, Form, UploadFile, HTTPException
 import shutil
 import os
+import env
 
 app = FastAPI()
 
 # Define the directories where files will be saved
-RESUME_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\Candidate\\CV"
-JOB_DESC_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\Candidate\\JD"
-HR_RESUME_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\HR\\CV"
-HR_JOB_DESC_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\HR\\JD"
-VIDEO_RESUME_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\HR\\video_file"
+RESUME_DIRECTORY = env.RESUME_DIRECTORY
+JOB_DESC_DIRECTORY = env.JOB_DESC_DIRECTORY
+HR_RESUME_DIRECTORY = env.HR_RESUME_DIRECTORY
+HR_JOB_DESC_DIRECTORY = env.HR_JOB_DESC_DIRECTORY
+VIDEO_RESUME_DIRECTORY = env.VIDEO_RESUME_DIRECTORY
 
 
 # Ensure directories exist

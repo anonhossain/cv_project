@@ -21,8 +21,8 @@ genai.configure(api_key=env.GOOGLE_API_KEY)
 #GEMINI FOR CANDIDATE
 class Gemini:
 
-    RESUME_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\Candidate\\CV\\resume.pdf"
-    JOB_DESC_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\Candidate\\JD\\jd.txt"
+    RESUME_DIRECTORY = "C:\\xampp\\htdocs\\cv_project\\uploads\\Candidate\\CV\\resume.pdf"
+    JOB_DESC_DIRECTORY = "C:\\xampp\\htdocs\\cv_project\\uploads\\Candidate\\JD\\jd.txt"
     
     @staticmethod
     def get_gemini_response(prompt):
@@ -68,13 +68,13 @@ class Gemini:
         return response_text
 
 class GeminiHR:
-    RESUME_HR_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\HR\\CV\\"
-    JOB_DESC_HR_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\HR\\JD\\jd.txt"
+    RESUME_HR_DIRECTORY = env.HR_RESUME_DIRECTORY
+    JOB_DESC_HR_DIRECTORY = env.JOB_DESC_HR_DIRECTORY
 
     @staticmethod
     def get_gemini_response(prompt):
         """Get response from Gemini AI."""
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel(env.MODEL)
         response = model.generate_content(prompt)
         return response.text
 
@@ -93,8 +93,8 @@ class GeminiHR:
     @staticmethod
     def process_resume():
         """Process the resumes based on the user's selected action."""
-        RESUME_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\HR\\CV\\"
-        JOB_DESC_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\HR\\JD\\jd.txt"
+        RESUME_DIRECTORY = "C:\\xampp\\htdocs\\cv_project\\uploads\\HR\\CV\\"
+        JOB_DESC_DIRECTORY = "C:\\xampp\\htdocs\\cv_project\\uploads\\HR\\JD\\jd.txt"
 
         job_desc = Gemini.load_job_description(JOB_DESC_DIRECTORY)
 
@@ -134,7 +134,7 @@ class GeminiHR:
 # Extract information from resumes and save to CSV
 #----------------------------------------------------------------
 
-HR_RESUME_DIRECTORY = "C:\\xampp\\htdocs\\login_signup\\uploads\\HR\\CV\\"
+HR_RESUME_DIRECTORY = env.HR_RESUME_DIRECTORY
 
 class ResumeExtractor:
 
@@ -237,13 +237,13 @@ class ResumeExtractor:
 #----------------------------------------------------------------
 
 class GeminiHR_Generate_questions:
-    RESUME_DIR = "C:\\xampp\\htdocs\\login_signup\\uploads\\HR\\CV\\"
-    JD_PATH = "C:\\xampp\\htdocs\\login_signup\\uploads\\Candidate\\JD\\jd.txt"
-    OUTPUT_DIR = "C:\\xampp\\htdocs\\login_signup\\output\\"
+    RESUME_DIR = env.RESUME_DIR
+    JD_PATH = env.JD_PATH
+    OUTPUT_DIR = env.OUTPUT_DIR
 
     @staticmethod
     def get_gemini_response(prompt):
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel(env.MODEL)
         response = model.generate_content(prompt)
         return response.text
 
