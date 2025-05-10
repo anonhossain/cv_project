@@ -1,4 +1,4 @@
-# 🧠 CV Tutor – AI-Powered Resume & JD Analyzer
+# 🧠 AI-Powered Recruitment Assistant
 
 CV Tutor is a smart AI-based web application that enhances job applications for candidates and streamlines the recruitment process for HR teams. It compares resumes with job descriptions, suggests improvements, and automates key hiring workflows.
 
